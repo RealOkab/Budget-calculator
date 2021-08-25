@@ -1,0 +1,133 @@
+.inputForm {
+  display: flex;
+  justify-content: center;
+}
+
+.inputForm input {
+  width: 20rem;
+  margin-right: 5rem;
+}
+
+#fair {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+}
+#fair:hover,
+#fair:focus {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.obed {
+  display: flex;
+  align-self: flex-end;
+  color: blue;
+  font-size: 1rem;
+  border: 2px solid blue;
+  margin: 2em 2em 2em 2em;
+  padding-left: 20px;
+  padding-right: 20px;
+ 
+}
+
+.obed:hover, .obed:focus {
+  display: flex;
+  align-self: flex-end;
+  color: blue;
+  font-size: 1rem;
+  border: 4px solid blue;
+  margin: 2em 2em 2em 2em;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 50%;
+}
+
+.big {
+  background-color: white;
+  width: 15rem;
+  margin: 3rem;
+  font-size: xx-large;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  color: blue;
+  border: 2px solid rgba(20, 20, 211, 0.295) !important;
+}
+
+.inputDiv {
+  background-image: url("images/bird.jpg");
+  background-size: cover;
+  height: 20rem;
+}
+
+.rest {
+  background-color: rgba(255, 255, 255, 0.329);
+  height: 20rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+#okab {
+  width: 100px;
+}
+
+#okab:focus,
+#okab:hover {
+  width: 120px;
+  border: 2px solid red;
+}
+
+.selected {
+  background-color: lime;
+}
+
+li {
+  font-size: 1.5rem;
+}
+
+.fine-girl {
+  border: 2px solid lime;
+  margin-left: 1.5rem;
+}
+
+#Dnon,
+#Dnone {
+  background-color: aqua !important;
+  display: none;
+}
+
+.h1 {
+  display: flex;
+  color: blue;
+  justify-content: center;
+  font-family: serif;
+  font-style: italic;
+  font-variant: small-caps;
+}
+.fr {
+  display: flex;
+  justify-content: center;
+  font-size: small;
+}
+.tt {
+  display: none;
+}
+
+.newH1 {
+  color: blue;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  font-style: oblique;
+}
+.asd {
+  border-bottom: 2px solid blue;
+  border-top: none;
+}
+
