@@ -12,6 +12,8 @@ let spanSelection3 = document.querySelectorAll("span")[3];
 let jk = document.querySelectorAll("span");
 let Dnon = document.querySelector("#Dnon");
 let Dnone = document.querySelector("#Dnone");
+let big = document.querySelector(".big");
+
 
 let ol = document.querySelectorAll("ol")[1];
 let ole = document.querySelectorAll("ol")[0];
@@ -37,7 +39,7 @@ incomeChange.addEventListener("click", function () {
 });
 
 addButton.addEventListener("click", function (event) {
-  if (expenseChange.classList[1] === "selected") {
+  if (expenseChange.classList[5] === "selected") {
     let li = document.createElement("li");
     let expButtonD = document.createElement("button");
     let sp2 = document.createElement("span");
@@ -155,7 +157,7 @@ let bb = document.getElementsByClassName("newSpan");
 let cc = document.getElementsByClassName("newSpan1");
 
 document.addEventListener("click", function (event) {
-  if (event.path[0].id === "okab" && incomeChange.classList[1] === "selected") {
+  if (event.path[0].id === "okab" && incomeChange.classList[3] === "selected") {
     /* initialArray.forEach(function (element) {
       let sum = 0;
       sum += element;
@@ -180,7 +182,7 @@ document.addEventListener("click", function (event) {
   }
   if (
     event.path[0].id === "okab" &&
-    expenseChange.classList[1] === "selected"
+    expenseChange.classList[5] === "selected"
   ) {
     let total = 0;
     for (let g = 0; g < cc.length; g++) {
@@ -228,4 +230,12 @@ if(e.key==='Enter' && asd.classList !=="tt"){
   asd.classList.add("tt")
 
 }
+})
+
+
+document.addEventListener("click", function (e) {
+ 
+  if (big.value==="NaN")
+  big.value=0
+
 })
