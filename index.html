@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="css/lib/bootstrap-4.5.3-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/Budget.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="css/lib/bootstrap-4.5.3-dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/Budget.css" />
-</head>
+  <body class="h-100">
+    <main class="container">
+      <h1 class="h1 mt-3">THE BUDGET APP</h1>
 
-<body class="h-100">
- <main class="container">
-
-  <h1 class="h1 mt-3">THE BUDGET APP</h1>
-
-  <div class="inputDiv mb-3">
-      <section class="mt-3 months">
-        <select class="asd form-control mb-3 mt-2" name="" id="Months">
+      <div class="inputDiv mb-3">
+        <section class="mt-3 months">
+          <select class="asd form-control mb-3 mt-2" name="" id="Months">
             <option value="January">January</option>
             <option value="February">February</option>
             <option value="March">March</option>
@@ -29,68 +30,78 @@
             <option value="October">October</option>
             <option value="November">November</option>
             <option value="December">December</option>
-      </select>
-  </section> 
+          </select>
+        </section>
 
-    <div id="fair">
-     
-      <input class="form-control big" type="text" name="" value="0" disabled/>
+        <div class="fair">
+          <div><h4 class="form-control big"></h4></div>
 
-      <button class="obed ml-2 mr-2 btn btn-success ">Expenditure</button>
+          <div class="andy">
+            <button class="obed ml-2 mr-2 btn btn-info stb">Expenditure</button>
 
-      <button class="obed selected btn btn-info ">Income</button>
-    </div>
-
-    <div class="inputForm mb-7 mt-3">
-      <div class="addButton1">
-        <div>
-
-         <input required class="jumboInputs form-control ml 2" type="text" placeholder="Enter Budget item here"
-        name="budgetItem" value="" id="BudgetItem"/>
+            <button class="obed selected btn btn-info stb" id="bt">Income</button>
+          </div>
         </div>
-    
-<div>
-  
-         <input type="number" requireds class="jumboInputs form-control ml-2 " type="text" placeholder="Enter Budget cost here"
-        name="budgetCost" value="" id="cost" />
-</div>
-     
+
+        <div class="inputForm mb-7 mt-3">
+          <div class="addButton1">
+            <div>
+              <input
+                required
+                class="jumboInputs form-control ml 2"
+                type="text"
+                placeholder=" Item here"
+                name="budgetItem"
+                value=""
+                pattern="[a-zA-Z]+"
+                id="BudgetItem"
+                name="item"
+              />
+            </div>
+
+            <div>
+              <input
+                type="number"
+                requireds
+                class="jumboInputs form-control ml-2"
+                type="text"
+                placeholder="Cost here"
+                name="budgetCost"
+                value=""
+                id="cost"
+              />
+            </div>
+          </div>
+
+          <button id="okab" class="btn btn-danger obed">Add</button>
+        </div>
       </div>
 
-      <button id="okab" class="btn btn-danger obed">Add</button>
-    </div>
-  </div>
-
-
-  <h1 class="newH1"></h1>
-
-
-<div class="headings">
-<aside class="inExp"> 
- 
-    <div class="income">
-      <h1>Income</h1>
-      <ol class="list"></ol>
-    </div>
     
-    <div class="expenses">
-      <h1>Expenditure</h1>
-      <ol class="list2"></ol>
-    </div>
 
-</aside>
+        <div class="lastInput">
+          <input type="text" class="form-control" id="Dnon" />
+          <input type="text" class="form-control" id="Dnone" />
+        </div>
+      </div>
+    </main>
 
+      <div class="headings container">
+        <h1 class="newH1"></h1>
 
-<div class="lastInput">
+        <aside class="inExp">
+          <div class="income" >
+            <h1 class="reduce">Income</h1>
+            <ol class="list"></ol>
+          </div>
 
-  <input type="text"  class="form-control" id="Dnon" />
-  <input type="text" class="form-control" id="Dnone" />
-</div>
-</div>
+          <div class="expenses">
+            <h1 class="reduce">Expenditure</h1>
+            <ol class="list2"></ol>
+          </div>
+        </aside>
+        </div>
 
- </main>
-
-  <script type="" src="Budget.js"></script>
-</body>
-
+    <script type="" src="Budget.js"></script>
+  </body>
 </html>

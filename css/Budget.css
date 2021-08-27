@@ -1,78 +1,250 @@
-.inputDiv{
-  background-image: url(images/Edit.jpg);
+.inputDiv {
+  background-image: url(images/bird.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 40vh;
-
- width: fit-content;
+  width: 100%;
+  margin-right: 2em;
 }
 
-#fair{
+.fair {
   display: flex;
-  justify-content: center;
   flex-direction: row;
-  margin-right: 1rem;
-  padding-right: 0.5rem;
 
+  padding-right: 2rem;
+  margin-left: 1rem;
 }
-
 
 .selected {
-  background-color: rgb(47, 240, 47);
+  background-color: rgb(0, 252, 0);
   color: black;
 }
 
-body{
-background-color:rgb(247, 246, 245) ;
+body {
+  background-color: rgb(247, 246, 245);
 }
 
-.inputForm{
-    display: flex;
-  justify-content: center;
+.inputForm {
+  display: flex;
+  justify-content: flex-start;
   flex-direction: row;
   margin-right: 1rem;
   padding-right: 0.5rem;
   margin-bottom: 2em !important;
+  padding-left: 1rem;
 }
 
-.addButton1{
-    display: flex;
+.addButton1 {
+  display: flex;
   justify-content: center;
   flex-direction: row;
   margin-right: 1rem;
   padding-right: 0.5rem;
-
-}
-.obed:hover{
-  background-color:chartreuse ;
 }
 
-.headings{
-  display: block;
+.obed {
+  font-size: 0.5em;
+  width: fit-content;
 }
-.inExp{
+.obed:hover {
+  background-color: chartreuse;
+}
+
+.headings {
+  width: 100%;
+}
+.inExp {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-around;
-  margin-top:2em;
+  justify-content: space-between;
+  margin-top: 1em;
+  margin-left: 0px !important;
 }
 
-.lastInput{
+.lastInput {
   display: none;
   flex-direction: row;
   width: 100%;
   justify-content: space-around;
-  margin-top:2em;
-
+  margin-top: 2em;
 }
-.fine-girl{
+.fine-girl {
   margin-bottom: 1rem;
+  margin-left: 0.5em;
+  height: 2em;
 }
 
-.months{
+.months {
   display: flex;
   justify-content: center;
   margin-left: 1rem;
   width: 50%;
+}
+.reduce {
+  font-size: 1em;
+  color: blue;
+  margin: 3rem;
+}
+.list {
+  display: flex;
+  flex-direction: row;
+}
+.newH1 {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  font-family: fantasy "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: blue;
+  text-decoration: black;
+  font-style: italic;
+  margin-left: 3em;
+}
+.h1 {
+  color: blue;
+  font-size: 1em;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  width: 70%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 3em;
+  margin-left: 3em;
+}
+
+.big {
+  width: 10em;
+}
+.andy {
+  display: flex;
+  flex-direction: row;
+}
+
+button,
+.obed {
+  width: fit-content;
+  margin-right: 3em;
+}
+
+.list {
+  display: block;
+}
+
+@media only screen and (max-width: 538px) {
+  .big {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .stb {
+    height: 30px;
+    width: fit-content;
+  }
+  #okab,
+  .jumboInputs,
+  .asd {
+    height: 30px;
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 417px) {
+  .big {
+    width: 70px;
+    height: 30px;
+  }
+
+  .stb {
+    height: 30px;
+    width: fit-content;
+  }
+
+  button .stb {
+    padding: 0%;
+    margin: 0%;
+  }
+}
+
+@media only screen and (max-width: 417px) {
+  .big {
+    width: 70px;
+    height: 30px;
+  }
+
+  .stb {
+    height: 30px;
+    width: 45px;
+    padding-left: 3px;
+    font-size: 6px;
+  }
+  #bt {
+    padding-right: 2px;
+  }
+
+  .jumboInputs {
+    width: 60px;
+  }
+
+  .addButton1 {
+    margin: 3px;
+  }
+
+  .inExp {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .reduce {
+    padding: 0%;
+    margin: 0%;
+  }
+
+  .list li,
+  .list2 li {
+    font-size: 10px;
+    display: flex;
+    align-content: flex-start;
+    width: fit-content;
+  }
+  .fine-girl {
+    height: 0.8rem;
+    font-size: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 9px;
+  }
+
+  li ol,
+  .stem,
+  .better {
+    display: flex;
+    flex-direction: block;
+    width: fit-content;
+  }
+
+  .list {
+    padding-left: 14px;
+  }
+  .headings {
+    width: 70%;
+  }
+  .inExp {
+    display: flex;
+    justify-content: space-between;
+  }
+  .reduce {
+    margin-bottom: 2em;
+  }
+  .newH1 {
+    font-size: 0.7rem;
+  }
 }

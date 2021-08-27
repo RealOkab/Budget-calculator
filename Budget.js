@@ -14,7 +14,6 @@ let Dnon = document.querySelector("#Dnon");
 let Dnone = document.querySelector("#Dnone");
 let big = document.querySelector(".big");
 
-
 let ol = document.querySelectorAll("ol")[1];
 let ole = document.querySelectorAll("ol")[0];
 let lis1 = document.querySelectorAll(".income li");
@@ -24,10 +23,8 @@ let lister = document.querySelector(".list");
 let firstInputValue = firstInput.value;
 let secondInputValue = parseInt(secondInput.value);
 
-let asd = document.querySelector(".asd")
-let newH1 = document.querySelector(".newH1")
-
-
+let asd = document.querySelector(".asd");
+let newH1 = document.querySelector(".newH1");
 
 expenseChange.addEventListener("click", function () {
   expenseChange.classList.add("selected");
@@ -39,7 +36,7 @@ incomeChange.addEventListener("click", function () {
 });
 
 addButton.addEventListener("click", function (event) {
-  if (expenseChange.classList[5] === "selected") {
+  if (expenseChange.classList[6] === "selected") {
     let li = document.createElement("li");
     let expButtonD = document.createElement("button");
     let sp2 = document.createElement("span");
@@ -47,7 +44,7 @@ addButton.addEventListener("click", function (event) {
     let newSpan1 = document.createElement("sapn");
     newSpan1.setAttribute("class", "newSpan1");
 
-    li.innerHTML = firstInput.value + " => " + " $ ";
+    li.innerHTML = `${firstInput.value} =  $ `;
     expensesSpace.appendChild(ol);
     ol.appendChild(li);
     expButtonD.innerHTML = "Delete";
@@ -58,8 +55,13 @@ addButton.addEventListener("click", function (event) {
     sp2.appendChild(expButtonD);
 
     expensesSpace.appendChild(ol);
+    firstInput.value = "";
+    secondInput.value = "";
   }
-  if (incomeChange.classList[1] === "selected") {
+  if (
+    incomeChange.classList[1] === "selected" ||
+    incomeChange.classList[4] === "selected"
+  ) {
     let lipo = document.createElement("li");
     let buttonD = document.createElement("button");
     let sp1 = document.createElement("span");
@@ -67,8 +69,8 @@ addButton.addEventListener("click", function (event) {
     sp1.setAttribute("class", "newS");
     newSpan.setAttribute("class", "newSpan");
     ole.appendChild(lipo);
-
-    lipo.innerHTML = firstInput.value + " => " + " $ ";
+    console.log(incomeSpace);
+    lipo.innerHTML = `${firstInput.value}  =  $ `;
     lipo.appendChild(newSpan);
     newSpan.append(secondInput.value);
     lipo.appendChild(sp1);
@@ -78,7 +80,8 @@ addButton.addEventListener("click", function (event) {
     buttonD.setAttribute("class", "fine-girl  btn btn-success ");
     incomeSpace.appendChild(ole);
 
-    incomeSpace.appendChild(ole);
+    firstInput.value = "";
+    secondInput.value = "";
   } else if (firstInput.value === "" || secondInput.value === "") {
     firstInput.value = "";
     secondInput.value = "";
@@ -108,7 +111,6 @@ document.addEventListener("click", function (event) {
     po.remove(bird);
   }
 
-
   let sum = 0;
   for (let i = 0; i < bb.length; i++) {
     let bo = parseInt(bb[i].innerHTML);
@@ -117,9 +119,7 @@ document.addEventListener("click", function (event) {
     Dnon.value = sum;
   }
 
-  thirdInput.value = parseInt(Dnon.value) - parseInt(Dnone.value);
-
- 
+  big.textContent = parseInt(Dnon.value) - parseInt(Dnone.value);
 });
 
 document.addEventListener("click", function (event) {
@@ -142,13 +142,11 @@ document.addEventListener("click", function (event) {
       console.log(total);
     }
   }
-  thirdInput.value = parseInt(Dnon.value) - parseInt(Dnone.value);
+  big.textContent = parseInt(Dnon.value) - parseInt(Dnone.value);
 
-  if(thirdInput.value==="NaN"
-    ){
-      thirdInput.value=0
-    
-    }
+  if (big.textContent === "NaN") {
+    big.textContent = 0;
+  }
 });
 let initialArray = [];
 let initialArray2 = [];
@@ -157,16 +155,16 @@ let bb = document.getElementsByClassName("newSpan");
 let cc = document.getElementsByClassName("newSpan1");
 
 document.addEventListener("click", function (event) {
-  if (event.path[0].id === "okab" && incomeChange.classList[3] === "selected") {
+  if (event.path[0].id === "okab" && incomeChange.classList[4] === "selected") {
     /* initialArray.forEach(function (element) {
       let sum = 0;
       sum += element;
       console.log(sum); */
     // });
-   
-    let k=firstInput.value[0]
-    k.toUpperCase()
-    
+
+    let k = firstInput.value[0];
+    k.toUpperCase();
+
     let sum = 0;
 
     for (let i = 0; i < bb.length; i++) {
@@ -182,29 +180,29 @@ document.addEventListener("click", function (event) {
   }
   if (
     event.path[0].id === "okab" &&
-    expenseChange.classList[5] === "selected"
+    expenseChange.classList[6] === "selected"
   ) {
     let total = 0;
     for (let g = 0; g < cc.length; g++) {
       let dd = parseInt(cc[g].innerHTML);
       total += dd;
       Dnone.value = total;
-      thirdInput.value = parseInt(Dnon.value) - parseInt(Dnone.value);
+      big.textContent = parseInt(Dnon.value) - parseInt(Dnone.value);
     }
   }
   if (secondInput.value === "") {
     secondInput.value = "Enter an input here";
   } else if (firstInput.value === "") {
-    firstInput.value = parseInt(0);
+    firstInput.value = "";
   }
   if (Dnone.value === "") {
     Dnone.value = 0;
-    thirdInput.value = Dnon;
+    big.textContent = Dnon;
   }
-  thirdInput.value = parseInt(Dnon.value) - parseInt(Dnone.value);
+  big.textContent = parseInt(Dnon.value) - parseInt(Dnone.value);
 });
 if (secondInput.value === "") {
-  secondInput.value = parseInt(0);
+  secondInput.value = "";
 } else if (firstInput.value === "") {
   firstInput.value = "Enter an income";
 }
@@ -219,23 +217,25 @@ ol.addEventListener("click", function (e) {
   if (ol.childElementCount === 1) {
     Dnone.value = parseInt(0);
   }
-
-
- 
 });
 
-document.addEventListener("keydown",function(e){
-if(e.key==='Enter' && asd.classList !=="tt"){
-  newH1.append("BUDGET FOR MONTH " + asd.value.toUpperCase())
-  asd.classList.add("tt")
-
-}
-})
-
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Enter" && asd.classList !== "tt") {
+    newH1.append("BUDGET FOR MONTH " + asd.value.toUpperCase());
+    asd.classList.add("tt");
+  }
+});
 
 document.addEventListener("click", function (e) {
- 
-  if (big.value==="NaN")
-  big.value=0
+  if (big.textContent === "NaN") big.textContent = 0;
 
-})
+  if (firstInput.value === "0") {
+    firstInput.value = "";
+  }
+
+  if (secondInput.value === "0") {
+    secondInput.value = "";
+  }
+
+  newH1.textContent = `Budget for the moth of ${asd.value}`;
+});
