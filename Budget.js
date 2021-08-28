@@ -38,20 +38,21 @@ incomeChange.addEventListener("click", function () {
 addButton.addEventListener("click", function (event) {
   if (expenseChange.classList[6] === "selected") {
     let li = document.createElement("li");
+    li.setAttribute("class", "biggy");
     let expButtonD = document.createElement("button");
     let sp2 = document.createElement("span");
     sp2.setAttribute("class", "new-S");
     let newSpan1 = document.createElement("sapn");
     newSpan1.setAttribute("class", "newSpan1");
 
-    li.innerHTML = `${firstInput.value} =  $ `;
+    li.innerHTML = `${firstInput.value} =  $ ${secondInput.value}`;
     expensesSpace.appendChild(ol);
     ol.appendChild(li);
     expButtonD.innerHTML = "Delete";
     expButtonD.setAttribute("class", "fine-girl  btn btn-success ");
     li.appendChild(newSpan1);
     li.appendChild(sp2);
-    newSpan1.append(secondInput.value);
+    //newSpan1.append(secondInput.value);
     sp2.appendChild(expButtonD);
 
     expensesSpace.appendChild(ol);
@@ -63,6 +64,7 @@ addButton.addEventListener("click", function (event) {
     incomeChange.classList[4] === "selected"
   ) {
     let lipo = document.createElement("li");
+    lipo.setAttribute("class", "biggy");
     let buttonD = document.createElement("button");
     let sp1 = document.createElement("span");
     let newSpan = document.createElement("span");
@@ -70,9 +72,9 @@ addButton.addEventListener("click", function (event) {
     newSpan.setAttribute("class", "newSpan");
     ole.appendChild(lipo);
     console.log(incomeSpace);
-    lipo.innerHTML = `${firstInput.value}  =  $ `;
+    lipo.innerHTML = `${firstInput.value}  =  $ ${secondInput.value}`;
     lipo.appendChild(newSpan);
-    newSpan.append(secondInput.value);
+    //newSpan.append(secondInput.value);
     lipo.appendChild(sp1);
     sp1.appendChild(buttonD);
 

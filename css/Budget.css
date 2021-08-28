@@ -1,5 +1,5 @@
 .inputDiv {
-  background-image: url(images/bird.jpg);
+  background-image: url(images/bird1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 40vh;
@@ -16,8 +16,9 @@
 }
 
 .selected {
-  background-color: rgb(0, 252, 0);
-  color: black;
+  background-color: rgb(0, 252, 0) !important;
+  color: black !important;
+  border: 0ch;
 }
 
 body {
@@ -45,9 +46,6 @@ body {
 .obed {
   font-size: 0.5em;
   width: fit-content;
-}
-.obed:hover {
-  background-color: chartreuse;
 }
 
 .headings {
@@ -104,7 +102,7 @@ body {
 }
 .h1 {
   color: blue;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 .container,
@@ -113,11 +111,8 @@ body {
 .container-md,
 .container-sm,
 .container-xl {
-  width: 70%;
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: 3em;
-  margin-left: 3em;
 }
 
 .big {
@@ -176,7 +171,7 @@ button,
 
 @media only screen and (max-width: 417px) {
   .big {
-    width: 70px;
+    width: 100px;
     height: 30px;
   }
 
@@ -191,7 +186,7 @@ button,
   }
 
   .jumboInputs {
-    width: 60px;
+    width: 80px;
   }
 
   .addButton1 {
@@ -227,7 +222,7 @@ button,
   .stem,
   .better {
     display: flex;
-    flex-direction: block;
+    flex-direction: row;
     width: fit-content;
   }
 
@@ -235,7 +230,7 @@ button,
     padding-left: 14px;
   }
   .headings {
-    width: 70%;
+    width: 90%;
   }
   .inExp {
     display: flex;
@@ -247,4 +242,32 @@ button,
   .newH1 {
     font-size: 0.7rem;
   }
+  .biggy {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  ol {
+    padding-left: 2px;
+  }
+  .texts {
+    font-size: 9px;
+    line-height: 15px;
+  }
+  .tips {
+    font-size: 0.7em;
+    margin-left: 1em;
+    color: blue;
+  }
+
+  .direction {
+    font-size: 10px;
+  }
+  .foot {
+    background-color: rgb(233, 233, 240);
+  }
+}
+
+.tips {
+  color: blue;
 }
