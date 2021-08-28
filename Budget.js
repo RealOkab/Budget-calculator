@@ -45,7 +45,7 @@ addButton.addEventListener("click", function (event) {
     let newSpan1 = document.createElement("sapn");
     newSpan1.setAttribute("class", "newSpan1");
 
-    li.innerHTML = `${firstInput.value} =  $ ${secondInput.value}`;
+    li.innerHTML = `${firstInput.value} =  $ ` ;
     expensesSpace.appendChild(ol);
     ol.appendChild(li);
     expButtonD.innerHTML = "Delete";
@@ -73,7 +73,7 @@ addButton.addEventListener("click", function (event) {
     newSpan.setAttribute("class", "newSpan");
     ole.appendChild(lipo);
     //console.log(incomeSpace);
-    lipo.innerHTML = `${firstInput.value}  =  $ ${secondInput.value}`;
+    lipo.innerHTML = `${firstInput.value}  =  $ `;
     lipo.appendChild(newSpan);
     newSpan.append(secondInput.value);
     lipo.appendChild(sp1);
