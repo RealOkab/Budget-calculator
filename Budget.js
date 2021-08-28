@@ -52,12 +52,13 @@ addButton.addEventListener("click", function (event) {
     expButtonD.setAttribute("class", "fine-girl  btn btn-success ");
     li.appendChild(newSpan1);
     li.appendChild(sp2);
-    //newSpan1.append(secondInput.value);
+    newSpan1.append(secondInput.value);
     sp2.appendChild(expButtonD);
-
+//console.log(secondInput.value)
     expensesSpace.appendChild(ol);
     firstInput.value = "";
     secondInput.value = "";
+
   }
   if (
     incomeChange.classList[1] === "selected" ||
@@ -71,10 +72,10 @@ addButton.addEventListener("click", function (event) {
     sp1.setAttribute("class", "newS");
     newSpan.setAttribute("class", "newSpan");
     ole.appendChild(lipo);
-    console.log(incomeSpace);
+    //console.log(incomeSpace);
     lipo.innerHTML = `${firstInput.value}  =  $ ${secondInput.value}`;
     lipo.appendChild(newSpan);
-    //newSpan.append(secondInput.value);
+    newSpan.append(secondInput.value);
     lipo.appendChild(sp1);
     sp1.appendChild(buttonD);
 
@@ -141,7 +142,7 @@ document.addEventListener("click", function (event) {
       let dd = parseInt(cc[g].innerHTML);
       total += dd;
       Dnone.value = total;
-      console.log(total);
+      //console.log(cc);
     }
   }
   big.textContent = parseInt(Dnon.value) - parseInt(Dnone.value);
